@@ -7,3 +7,5 @@
 [2024-12-20 07:51:40,483][INFO] Database load successfull!
 [2024-12-20 07:51:52,774][INFO] File read correctly
 [2024-12-20 07:51:52,805][INFO] Database load successfull!
+[2024-12-20 09:52:25,865][INFO] File read correctly
+[2024-12-20 09:52:25,896][INFO] Database load successfull!
