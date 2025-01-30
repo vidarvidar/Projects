@@ -13,7 +13,8 @@ connection = sql.connect(r'C:\Users\vidar\Documents\Skóli\TUC\Data_Science\Proj
 shots = pd.read_sql("""SELECT id, period, timestamp, minute, second, location_x, location_y, player, possession_team, shot_outcome, shot_statsbomb_xg
                       FROM WomensWorldCup2023 WHERE type IS 'Shot'
                       ORDER BY period, timestamp;""", connection)
-shots['distance_from_goal'] = np.sqrt(((shots.location_y-40)**2) + ((shots.location_x-120)**2)) # räknar distans från mitten av målet (ligger i koordinat x124, y40), c^2 = a^2+b^2
+shots['distance_from_goal'] = np.sqrt(((shots.location_y-40)**2) + ((shots.location_x-120)**2)) 
+# räknar distans från mitten av målet (ligger i koordinat x124, y40), c^2 = a^2+b^2
 
 passes = pd.read_sql("""SELECT id, period, timestamp, minute, second, location_x, location_y, player, possession_team, 
                     pass_type, pass_length, pass_angle, pass_outcome
